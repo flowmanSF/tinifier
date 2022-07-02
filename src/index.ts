@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import Router from 'koa-router';
-import bodyParser from 'koa-body';
+import koaBody from 'koa-body';
 import { createClient } from '@redis/client';
 
 const app = new Koa();
@@ -24,7 +24,7 @@ router
   .get('/', async ctx => {
     ctx.body = `To shorten a url: curl -d 'url=<your url>' ${ctx.URL}`;
   })
-  .post('/', bodyParser(), async ctx => {
+  .post('/', koaBody(), async ctx => {
     const { url } = ctx.request.body;
     const id = createID();
     await client.set(id, url);
