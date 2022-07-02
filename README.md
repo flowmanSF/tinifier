@@ -1,5 +1,5 @@
 # tinifier
-URL shortner.
+URL shortener.
 
 ## License
 [MIT](/LICENSE).
