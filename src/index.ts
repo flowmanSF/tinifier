@@ -5,7 +5,9 @@ import { createClient } from '@redis/client';
 
 const app = new Koa();
 const router = new Router();
-const client = createClient();
+const client = createClient({
+  url: 'redis://redis',
+});
 await client.connect();
 
 const PORT = process.env.PORT || 8080;

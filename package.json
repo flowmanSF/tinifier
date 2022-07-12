@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -x node --no-warnings --loader ts-node/esm src/index.ts",
+    "start": "node build/index.js",
     "build": "tsc"
   },
   "dependencies": {

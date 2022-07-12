@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  db:
+    image: redis
+    restart: always
+    hostname: redis
+    ports:
+      - "6379:6379"
+  app:
+    build: .
+    command: yarn start
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    environment:
+      PORT: 8080
+      NODE_ENV: production
