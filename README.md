@@ -1,4 +1,4 @@
-# tinifier
+# Tinifier
 URL shortener.
 
 ## License
