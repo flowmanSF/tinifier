@@ -2,4 +2,4 @@
 URL shortener.
 
 ## License
-[MIT](/LICENSE).
+[MIT](LICENSE).
