@@ -15,4 +15,5 @@ services:
       - db
     environment:
       PORT: 8080
+      ID_LENGTH: 5
       NODE_ENV: production
