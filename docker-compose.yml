@@ -1,16 +1,16 @@
-version: "3.9"
+version: '3.9'
 services:
   db:
     image: redis
     restart: always
     hostname: redis
     ports:
-      - "6379:6379"
+      - '6379:6379'
   app:
     build: .
     command: yarn start
     ports:
-      - "8080:8080"
+      - '8080:8080'
     links:
       - db
     environment:
